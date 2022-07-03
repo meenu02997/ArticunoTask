@@ -35,20 +35,20 @@ class MyHomePage extends StatefulWidget {
 class _MyHomePageState extends State<MyHomePage> with TickerProviderStateMixin {
   final _random = Random();
 
-  List colors = [Colors.red, Colors.green, Colors.yellow,Colors.indigoAccent, Colors.teal, Colors.greenAccent, Colors.grey, Colors.amber, Colors.purple,Colors.deepOrange];
-  List<Color> colors1 = [Colors.lightGreen, Colors.black, Colors.pink, Colors.lightGreenAccent, Colors.orange, Colors.cyan, Colors.lightBlue,Colors.brown,Colors.purpleAccent ];
+  List colors = [Colors.red, Colors.green, Colors.yellow,Colors.indigoAccent,Colors.lightGreen, Colors.black, Colors.lightGreen, Colors.black, Colors.pink, Colors.lightGreenAccent, Colors.orange, Colors.cyan, Colors.lightBlue,Colors.brown,Colors.purpleAccent ,Colors.pink, Colors.lightGreenAccent, Colors.orange, Colors.cyan, Colors.lightBlue,Colors.brown,Colors.purpleAccent , Colors.teal, Colors.greenAccent, Colors.grey, Colors.amber, Colors.purple,Colors.deepOrange];
+  //List<Color> colors1 = [Colors.lightGreen, Colors.black, Colors.pink, Colors.lightGreenAccent, Colors.orange, Colors.cyan, Colors.lightBlue,Colors.brown,Colors.purpleAccent ];
   Random random = Random();
-  Random randomc2 = Random();
+  //Random randomc2 = Random();
 
   int index = 0;
 
   void changeIndex() {
-    setState(() => index = random.nextInt(7));
+    setState(() => index = random.nextInt(17));
   }
 
-  void changeIndexC2() {
-    setState(() => index = randomc2.nextInt(9));
-  }
+  // void changeIndexC2() {
+  //   setState(() => index = randomc2.nextInt(9));
+  // }
 
   final double widgetALeft = 5;
   final double widgetBLeft = 110;
@@ -84,7 +84,7 @@ class _MyHomePageState extends State<MyHomePage> with TickerProviderStateMixin {
     // TODO: implement initState
     super.initState();
     changeIndex();
-    changeIndexC2();
+    //changeIndexC2();
   }
 
   @override
@@ -117,7 +117,7 @@ class _MyHomePageState extends State<MyHomePage> with TickerProviderStateMixin {
             Positioned(
               top: 5,
               left: widgetBLeft - tweenValue,
-              child: Container(width: 100.0, height: 100.0, color: colors1[index]
+              child: Container(width: 100.0, height: 100.0, color: colors[index +1]
               ),
             ),
           ],
